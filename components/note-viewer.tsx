@@ -21,10 +21,10 @@ export function NoteViewer({ open, onOpenChange, note }: NoteViewerProps) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto overflow-x-hidden w-[95vw] p-4 sm:p-6">
-        <DialogHeader className="pr-8">
-          <DialogTitle className="flex items-center gap-2 text-xl sm:text-2xl break-words pr-2">
-            {note.is_pinned && <Pin className="h-4 w-4 sm:h-5 sm:w-5 text-primary fill-current flex-shrink-0" />}
-            <span className="break-words overflow-wrap-anywhere">{note.title || '无标题'}</span>
+        <DialogHeader className="pr-10 sm:pr-12">
+          <DialogTitle className="flex items-start gap-2 text-xl sm:text-2xl break-words leading-tight">
+            {note.is_pinned && <Pin className="h-4 w-4 sm:h-5 sm:w-5 text-primary fill-current flex-shrink-0 mt-1" />}
+            <span className="break-words overflow-wrap-anywhere hyphens-auto flex-1">{note.title || '无标题'}</span>
           </DialogTitle>
           <div className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground pt-2 flex-wrap">
             <Calendar className="h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" />

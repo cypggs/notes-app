@@ -34,9 +34,9 @@ export function NoteCard({ note, onView, onEdit, onDelete, onTogglePin }: NoteCa
         <CardHeader className="pb-3">
           <div className="flex items-start justify-between gap-2">
             <div className="flex-1 min-w-0">
-              <h3 className="font-semibold text-lg truncate flex items-center gap-2">
-                {note.is_pinned && <Pin className="h-4 w-4 text-primary flex-shrink-0" />}
-                {note.title || '无标题'}
+              <h3 className="font-semibold text-lg line-clamp-2 flex items-start gap-2">
+                {note.is_pinned && <Pin className="h-4 w-4 text-primary flex-shrink-0 mt-1" />}
+                <span className="break-words overflow-wrap-anywhere">{note.title || '无标题'}</span>
               </h3>
               <p className="text-xs text-muted-foreground mt-1">
                 {formatDate(note.created_at)}

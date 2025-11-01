@@ -125,8 +125,8 @@ export function NoteEditor({ open, onOpenChange, note, tags, onSave }: NoteEdito
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto w-[95vw] p-4 sm:p-6">
-        <DialogHeader className="pr-8">
-          <DialogTitle className="text-lg sm:text-xl">{note ? '编辑笔记' : '新建笔记'}</DialogTitle>
+        <DialogHeader className="pr-10 sm:pr-12">
+          <DialogTitle className="text-lg sm:text-xl break-words leading-tight">{note ? '编辑笔记' : '新建笔记'}</DialogTitle>
         </DialogHeader>
         <div className="space-y-3 sm:space-y-4 py-3 sm:py-4">
           <div className="space-y-2">

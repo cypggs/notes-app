@@ -156,3 +156,11 @@
   max-width: 100% !important;
 }
 
+/* Dialog 标题优化 - 确保长标题正确换行 */
+[role="dialog"] [id*="dialog-title"] {
+  overflow-wrap: break-word !important;
+  word-wrap: break-word !important;
+  word-break: break-word !important;
+  hyphens: auto !important;
+}
+
